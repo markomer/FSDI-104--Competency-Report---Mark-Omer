@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <title>Register</title>
+</head>
+<body>
+
+  <header>
+    <h2>The Fashion Pet</h2>
+  </header>
+
+  <nav class="navBar">
+    <a class="navText" href="index.html">Home</a>
+  </nav>
+
+  <main>
+
+    <div class="petsPicBlock">
+      <img class="petsPic" src="img/petsGroup.png" alt="Pets Group">
+    </div>
+
+
+    <!-- create a form with the following inputts
+    name,age,gender,breed,service,owner,contact
+    -->
+    <div class="regAndCardsBox">
+      <div class="input-container">
+        <h2>Register Your Pet Here</h2>
+        <form id="reset">
+          
+          <div class="form-control">
+            <input type="text" id="txtName" placeholder="Enter Name">
+          </div>
+          <div class="form-control">
+            <input type="number" id="txtAge" placeholder="Enter Age">
+          </div>
+          <div class="form-control">
+            <input type="text" id="txtGender" placeholder="Enter Gender">
+          </div>
+          <div class="form-control">
+            <input type="text" id="txtBreed" placeholder="Enter Breed">
+          </div>
+          <div class="form-control">
+            <select class="selectService" id="selService">
+              <option value="Select the service">Select Service</option>
+              <option value="nails cut">Nails Cut</option>
+              <option value="wash">Wash</option>
+              <option value="grooming">Grooming</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <input type="text" id="txtOwnerName" placeholder="Owner Name">
+          </div>
+          <div class="form-control">
+            <input type="text" id="txtContactPhone" placeholder="Contact Phone">
+          </div>
+
+          <div class="resetBtnBox">
+            <input class="resetInput" type="reset" value="Reset">
+          </div>
+
+        </form>
+
+          <div class="regAndResetBtnsBox">
+            <button class="btnRegister" onclick="register();" style="background-color: rgb(146, 228, 70)">REGISTER</button>
+            <!--input type="reset" class="btn btn-danger" value="Reset Info" style="background-color: orange"-->
+          </div>
+      
+      </div>
+
+      <div class="cardsSearchClearBox">
+        <div class="searchClearBox">
+          <div>
+            <input class="searchEntry" type="text" id="txtSearch" placeholder="Enter Pet Name">
+            <button onclick="searchPet()">Search</button>
+            <button id="btnClear" onclick="showPetsCards()" >Clear Search</button>
+          </div>
+        </div>
+      
+
+        <div class="petListTitle">
+          <p id="headerList">Pets List</p>
+        </div>
+      
+
+        <div id="petList" class="pets">
+          <!-- display the pets-->
+        </div>
+
+        <button class="tableBtn" onClick="toggleTable()">Table of Pets</button>
+
+        <table id="myTable" style="width:50%" class="hidden">
+        
+    
+          <tr>
+            <th>Pet Name</th>
+            <th>Service Type</th>
+            <th>Owner Name</th>
+            <th>Contact Number</th>
+    
+          </tr>
+          <tr>
+            <td>Bruno</td>
+            <td>Grooming</td>
+            <td>Julie</td>
+            <td>555-555-5555</td>
+          </tr>
+          <tr>
+            <td>Fido</td>
+            <td>Nails Trim</td>
+            <td>Billy</td>
+            <td>555-555-5555</td>
+          </tr>
+          <tr>
+            <td>Spots</td>
+            <td>Wash</td>
+            <td>Ben</td>
+            <td>555-555-5555</td>
+          </tr>
+    
+        </table>
+
+
+
+      </div>
+
+      <div class="cardsBox">
+      <script src="scripts/register.js"></script>
+      <!--<scrip src="scripts/test2.js"></script-->
+      </div>
+
+    </div>
+
+    <p><></p>
+
+    <div class="salonInfo" id="salonInformation">
+    <script src="scripts/displayInfo.js"></script>
+    </div>
+
+
+
+    
+  </main>
+
+</body>
+</html>
